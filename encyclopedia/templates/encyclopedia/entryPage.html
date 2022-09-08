@@ -1,0 +1,7 @@
+{% extends 'encyclopedia/layout.html' %}
+{% block body%}
+<p>{{entryPage | safe}}</p>
+<a href="{%url 'editEntry' entryName %}">
+    editEntry
+</a>
+{%endblock%}
