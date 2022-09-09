@@ -10,6 +10,10 @@ def index(request):
     return render(request, "encyclopedia/index.html", {
         "entries": util.list_entries()
     })
+def listEntry(request):
+    return render(request, 'encyclopedia/listEntry.html', {
+    "entries": util.list_entries()
+})    
 
 def EntryPage(request, entryPage):
     if not util.get_entry(entryPage):
@@ -32,7 +36,7 @@ def SearchEntry(request):
                 li.append(i)
         if not li:
             return render(request, 'encyclopedia/entryError.html')
-        return render(request, "encyclopedia/index.html", {
+        return render(request, "encyclopedia/listEntry.html", {
         "entries": li
         })            
 def AddEntry(request):
