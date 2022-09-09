@@ -4,6 +4,7 @@ from . import views
 appname = "encyclopedia"
 urlpatterns = [
     path("", views.index, name="index"),
+    path("listEntry", views.listEntry, name="listEntry"),
     path("EntryPage/<str:entryPage>", views.EntryPage, name="EntryPage"),
     path("EntryPage", views.SearchEntry, name="SearchEntry"),
     path("AddEntry", views.AddEntry, name="AddEntry"),
