@@ -68,7 +68,9 @@ a {
   width: 80%;
   max-width: 335px;
 }
-
+form{
+  display: contents;
+}
 .search__input {
   height: 44px;
   padding: 0.8rem 0.8rem 0.8rem 1.2rem;

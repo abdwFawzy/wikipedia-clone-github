@@ -143,15 +143,20 @@
         </div>
       </section>
       <section class="search__container">
-        <div class="search">
-          <input class="search__input" type="text" />
-          <select class="search__select">
-            <option value="ES">ES</option>
-            <option value="EN">EN</option>
-            <option value="FR">FR</option>
-          </select>
+        <form action="{% url 'SearchEntry'%}" method="GET">
+            {% csrf_token %}          
+          <div class="search">
+              
+              <input class="search__input" type="text" name="q">
+              <select class="search__select">
+               <option value="ES">ES</option>
+               <option value="EN">EN</option>
+               <option value="FR">FR</option>
+              </select>
+          
+          <button class="search__button" type="submit"><i class="search__image"></i></button>
         </div>
-        <button class="search__button"><i class="search__image"></i></button>
+      </form>
       </section>
       <div class="main-footer__container">
         <section class="idioma__container">
